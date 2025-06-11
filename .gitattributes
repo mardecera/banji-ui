@@ -1,0 +1,11 @@
+# Apply LF to text files
+* text=auto eol=lf
+
+# Exclude binary files (images, videos, etc.)
+*.png binary
+*.jpg binary
+*.gif binary
+*.mp4 binary
+*.mp3 binary
+*.zip binary
+*.svg binary
