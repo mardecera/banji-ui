@@ -1,35 +1,32 @@
-import "./button.css"
+import clsx from "clsx"
+import styles from "./Button.module.css"
 
 export interface ButtonProps {
-	/** Is this the principal call to action on the page? */
-	primary?: boolean
-	/** What background color to use */
+	variant?: "banji-btn--primary" | "banji-btn--secondary"
 	backgroundColor?: string
-	/** How large should the button be? */
 	size?: "small" | "medium" | "large"
-	/** Button contents */
-	label: string
-	/** Optional click handler */
+	children: React.ReactNode
 	onClick?: () => void
+	disabled?: boolean
 }
 
-/** Primary UI component for user interaction */
 export const Button = ({
-	primary = false,
+	variant = "banji-btn--primary",
 	size = "medium",
 	backgroundColor,
-	label,
+	children,
+	disabled,
 	...props
 }: ButtonProps) => {
-	const mode = primary ? "storybook-button--primary" : "storybook-button--secondary"
 	return (
 		<button
 			type="button"
-			className={["storybook-button", `storybook-button--${size}`, mode].join(" ")}
+			className={clsx(styles["banji-btn"], styles[`banji-btn--${size}`], styles[variant])}
 			style={{ backgroundColor }}
+			disabled={disabled}
 			{...props}
 		>
-			{label}
+			{children}
 		</button>
 	)
 }

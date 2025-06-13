@@ -1,0 +1,19 @@
+{
+	"compilerOptions": {
+		"declaration": true,
+		"emitDeclarationOnly": true,
+		"outDir": "./dist",
+		"jsx": "react-jsx",
+		"module": "ESNext",
+		"moduleResolution": "Node",
+		"target": "ESNext",
+		"baseUrl": ".",
+		"paths": {
+			"@/*": ["src/*"]
+		},
+		"skipLibCheck": true,
+		"esModuleInterop": true,
+		"strict": true
+	},
+	"include": ["src", "index.ts"]
+}
