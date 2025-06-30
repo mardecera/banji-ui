@@ -46,13 +46,8 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      - name: Extract changelog for this tag (if any)
-        run: |
-          if [ -f CHANGELOG.md ]; then
-            sed -n "/^## \[\${{ github.ref_name }}\]/,/^## \[/p" CHANGELOG.md | sed '1d;$d' > .github/release-notes.md || true
-          else
-            echo "" > .github/release-notes.md
-          fi
+      - name: Extract changelog
+        run: node scripts/extract-changelog.js ${{ github.ref_name }}
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
