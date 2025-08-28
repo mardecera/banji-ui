@@ -1,0 +1,40 @@
+{
+	"name": "banji-ui",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"files": [
+		"dist"
+	],
+	"main": "./dist/banji-ui.umd.cjs",
+	"module": "./dist/banji-ui.js",
+	"exports": {
+		".": {
+			"import": "./dist/banji-ui.js",
+			"require": "./dist/banji-ui.umd.cjs"
+		}
+	},
+	"scripts": {
+		"dev": "vite",
+		"build": "tsc -b && vite build",
+		"lint": "eslint .",
+		"preview": "vite preview",
+		"biome:check": "biome check ./lib",
+		"biome:fix": "biome check --write ./lib"
+	},
+	"dependencies": {
+		"react": "^19.1.1",
+		"react-dom": "^19.1.1",
+		"vite-tsconfig-paths": "^5.1.4"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.2.0",
+		"@types/node": "^24.3.0",
+		"@types/react": "^19.1.10",
+		"@types/react-dom": "^19.1.7",
+		"@vitejs/plugin-react-swc": "^4.0.0",
+		"globals": "^16.3.0",
+		"typescript": "~5.8.3",
+		"vite": "^7.1.2"
+	}
+}
