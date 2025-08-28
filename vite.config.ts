@@ -1,13 +1,16 @@
+/// <reference types="vitest/config" />
 import { dirname, resolve } from "node:path"
 import { fileURLToPath } from "node:url"
 import react from "@vitejs/plugin-react-swc"
 import { defineConfig } from "vite"
+import dts from "vite-plugin-dts"
+import { libInjectCss } from "vite-plugin-lib-inject-css"
 import tsconfigPaths from "vite-tsconfig-paths"
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
 export default defineConfig({
-	plugins: [react(), tsconfigPaths()],
+	plugins: [react(), tsconfigPaths(), libInjectCss(), dts({ tsconfigPath: "./tsconfig.node.json", rollupTypes: true })],
 	resolve: {
 		alias: {
 			"@lib": resolve(__dirname, "./lib"),
@@ -29,5 +32,11 @@ export default defineConfig({
 				},
 			},
 		},
+	},
+	test: {
+		globals: true,
+		environment: "jsdom",
+		setupFiles: "./lib/setup.ts",
+		css: true,
 	},
 })

@@ -8,7 +8,7 @@
 		"skipLibCheck": true,
 		"paths": {
 			"banji-ui": ["./lib/main.ts"],
-			"@lib/*": ["./lib/*"],
+			"@lib/*": ["./lib/*"]
 		},
 
 		/* Bundler mode */
