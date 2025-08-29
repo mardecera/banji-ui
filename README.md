@@ -2,7 +2,7 @@
 
 ![Cover](./docs/images/banner-readme.png)
 
-![npm](https://img.shields.io/npm/v/banji-ui?color=blue\&logo=npm)
+[![pnpm](https://img.shields.io/badge/pnpm-10.14.0-F69220?logo=pnpm&logoColor=fff)](https://pnpm.io/)
 ![license](https://img.shields.io/github/license/mardecera/banji-ui)
 
 A modern **React component library** built for creating consistent, accessible, and easy-to-use interfaces. Powered by **TypeScript**, **Vite**.
