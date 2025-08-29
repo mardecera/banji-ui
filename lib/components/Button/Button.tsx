@@ -3,15 +3,29 @@ import { cleanClass } from "@lib/utils/cleanClass"
 import type { Props } from "./Button.types"
 
 import "./Button.css"
+import Spin from "../Spin/Spin"
 
-const Button = ({ children, variant = "primary", className, ...props }: Props) => {
-	const COMPONENT_NAME = `${LIBRARY_NAME}-button`
-	const COMPONENT_VARIANT_NAME = `${COMPONENT_NAME}__${variant}`
-	const COMPONENT_CLASS_NAME = cleanClass(COMPONENT_NAME, COMPONENT_VARIANT_NAME, className)
-
+const Button = ({
+	children,
+	className,
+	icon,
+	type = "primary",
+	variant = "default",
+	htmlType = "button",
+	loading = false,
+	iconPosition = "left",
+	...props
+}: Props) => {
 	return (
-		<button {...props} className={COMPONENT_CLASS_NAME}>
+		<button
+			{...props}
+			className={cleanClass(`${LIBRARY_NAME}-button`, `${LIBRARY_NAME}-button__${type}-${variant}`, `${className}`)}
+			type={htmlType}
+		>
+			{icon && iconPosition === "left" && !loading && icon}
+			{loading && <Spin />}
 			{children}
+			{icon && iconPosition === "right" && icon}
 		</button>
 	)
 }

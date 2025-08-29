@@ -23,7 +23,7 @@
 		"preview": "vite preview",
 		"biome": "biome check ./lib",
 		"biome:fix": "biome check --write ./lib",
-		"test": "vitest"
+		"test": "vitest run"
 	},
 	"dependencies": {
 		"react": "^19.1.1",
