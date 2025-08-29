@@ -1,69 +1,89 @@
-# React + TypeScript + Vite
+# Banji UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Cover](./docs/images/banner-readme.png)
 
-Currently, two official plugins are available:
+![npm](https://img.shields.io/npm/v/banji-ui?color=blue\&logo=npm)
+![license](https://img.shields.io/github/license/mardecera/banji-ui)
+![build](https://img.shields.io/github/actions/workflow/status/mardecera/banji-ui/ci.yml?branch=main)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A modern **React component library** built for creating consistent, accessible, and easy-to-use interfaces. Powered by **TypeScript**, **Vite**.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## ✨ Features
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+* ⚡️ **Lightweight & fast** – bundled with Vite + SWC.
+* 🎨 **Scoped styles** – each component imports its own CSS.
+* 🧩 **Reusable components** – designed to fit any React project.
+* 🛡️ **TypeScript support** – strong typing for safety.
+* 🧪 **Tested with Vitest + React Testing Library**.
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 📦 Installation
+
+With your favorite package manager:
+
+```bash
+pnpm add banji-ui
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🚀 Usage
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```tsx
+import { Button } from "banji-ui"
+
+export default App = () => {
+  return <Button variant="primary">Click me</Button>
+}
 ```
+
+---
+
+## 📚 Documentation
+
+> 📖 Coming soon.
+
+---
+
+## 🧪 Testing
+
+This library uses **Vitest** and **React Testing Library**.
+
+Run tests with:
+
+```bash
+pnpm test
+```
+
+---
+
+## 🛠️ Local Development
+
+Clone the repo and install dependencies:
+
+```bash
+git clone https://github.com/mardecera/banji-ui.git
+cd banji-ui
+pnpm install
+```
+
+Start development mode:
+
+```bash
+pnpm dev
+```
+
+Build the library:
+
+```bash
+pnpm build
+```
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](./LICENSE).
