@@ -8,7 +8,6 @@ on:
 
 jobs:
   biome:
-    name: Biome Lint & Format
     runs-on: ubuntu-latest
     permissions:
       contents: read
