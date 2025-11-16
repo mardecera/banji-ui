@@ -38,7 +38,7 @@ export default App = () => {
 
 ### Documentation
 
-> 📖 Coming soon.
+> 📖 Coming soon...
 
 ### Testing
 
