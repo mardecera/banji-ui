@@ -1,10 +1,7 @@
-<h1 align="center">Banji UI</h1>
 
 ![Cover](./docs/images/banner-readme.png)
 <div align="center">
-
-[![pnpm](https://img.shields.io/badge/pnpm-10.14.0-F69220?logo=pnpm&logoColor=fff)](https://pnpm.io/) ![license](https://img.shields.io/github/license/mardecera/banji-ui)
-
+<img src="https://img.shields.io/badge/license-mit-8fbd07?style=for-the-badge">
 </div>
 <div align="center">
 A modern <strong>React component library</strong> built for creating consistent, accessible, and easy-to-use interfaces. Powered by TypeScript, Vite.
@@ -47,7 +44,7 @@ This library uses **Vitest** and **React Testing Library**.
 Run tests with:
 
 ```bash
-pnpm test
+pnpm test:unit
 ```
 
 ### Local Development
