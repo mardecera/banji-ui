@@ -1,0 +1,52 @@
+name: Release - Publish to npm
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+          registry-url: "https://registry.npmjs.org/"
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 9
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      # --- Tests ---
+      - name: Run unit tests
+        run: pnpm test:unit
+
+      # --- Build ---
+      - name: Build library
+        run: pnpm build
+
+      # --- Set version from git tag ---
+      # "v1.2.3" → "1.2.3"
+      - name: Use tag as package version
+        run: |
+          TAG=${GITHUB_REF#refs/tags/}
+          VERSION=${TAG#v}
+          echo "Setting version to $VERSION"
+          pnpm pkg set version=$VERSION
+
+      # --- Publish ---
+      - name: Publish package to npm
+        run: pnpm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

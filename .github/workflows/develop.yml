@@ -1,0 +1,43 @@
+name: CI - Develop
+
+on:
+  pull_request:
+    branches:
+      - develop
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'pnpm'
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 9
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      # --- Linter + Formateo ---
+      - name: Run Biome check (format + lint)
+        run: pnpm biome
+
+      # --- Tests ---
+      - name: Run unit tests
+        run: pnpm test:unit
+
+      # --- Builds ---
+      - name: Build library
+        run: pnpm build
+
+      - name: Build Storybook
+        run: pnpm build-storybook
