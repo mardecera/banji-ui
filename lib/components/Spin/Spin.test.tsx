@@ -1,18 +1,17 @@
-import { render } from "@testing-library/react"
+import { render, screen } from "@testing-library/react"
 import { describe, expect, it } from "vitest"
 
 import Spin from "./Spin"
 
 describe("Spin", () => {
-	it("renders without crashing", () => {
-		const { container } = render(<Spin />)
-		const spin = container.querySelector("span")
-		expect(spin).toBeTruthy()
+	it("renders correctly", () => {
+		render(<Spin />)
+		expect(screen.getByTestId("spin")).toBeInTheDocument()
 	})
 
-	it("has the correct class", () => {
-		const { container } = render(<Spin />)
-		const spin = container.querySelector("span")
-		expect(spin).toHaveClass("binland-spin")
+	it("has correct class", () => {
+		render(<Spin />)
+		const element = screen.getByTestId("spin")
+		expect(element).toHaveClass("binland-spin")
 	})
 })

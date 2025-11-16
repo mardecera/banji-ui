@@ -19,7 +19,11 @@ const Button = ({
 	return (
 		<button
 			{...props}
-			className={cleanClass(`${LIBRARY_NAME}-button`, `${LIBRARY_NAME}-button__${type}-${variant}`, `${className}`)}
+			className={cleanClass(
+				`${LIBRARY_NAME}-button`,
+				`${LIBRARY_NAME}-button__${type}-${variant}`,
+				`${className}`,
+			)}
 			type={htmlType}
 		>
 			{icon && iconPosition === "left" && !loading && icon}
