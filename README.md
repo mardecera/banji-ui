@@ -1,15 +1,16 @@
-# Banji UI
+<h1 align="center">Banji UI</h1>
 
 ![Cover](./docs/images/banner-readme.png)
+<div align="center">
 
-[![pnpm](https://img.shields.io/badge/pnpm-10.14.0-F69220?logo=pnpm&logoColor=fff)](https://pnpm.io/)
-![license](https://img.shields.io/github/license/mardecera/banji-ui)
+[![pnpm](https://img.shields.io/badge/pnpm-10.14.0-F69220?logo=pnpm&logoColor=fff)](https://pnpm.io/) ![license](https://img.shields.io/github/license/mardecera/banji-ui)
 
-A modern **React component library** built for creating consistent, accessible, and easy-to-use interfaces. Powered by **TypeScript**, **Vite**.
+</div>
+<div align="center">
+A modern <strong>React component library</strong> built for creating consistent, accessible, and easy-to-use interfaces. Powered by TypeScript, Vite.
+</div>
 
----
-
-## ✨ Features
+### Features
 
 * ⚡️ **Lightweight & fast** – bundled with Vite + SWC.
 * 🎨 **Scoped styles** – each component imports its own CSS.
@@ -17,9 +18,7 @@ A modern **React component library** built for creating consistent, accessible, 
 * 🛡️ **TypeScript support** – strong typing for safety.
 * 🧪 **Tested with Vitest + React Testing Library**.
 
----
-
-## 📦 Installation
+### Installation
 
 With your favorite package manager:
 
@@ -27,9 +26,7 @@ With your favorite package manager:
 pnpm add banji-ui
 ```
 
----
-
-## 🚀 Usage
+### Usage
 
 ```tsx
 import { Button } from "banji-ui"
@@ -39,15 +36,11 @@ export default App = () => {
 }
 ```
 
----
-
-## 📚 Documentation
+### Documentation
 
 > 📖 Coming soon.
 
----
-
-## 🧪 Testing
+### Testing
 
 This library uses **Vitest** and **React Testing Library**.
 
@@ -57,9 +50,7 @@ Run tests with:
 pnpm test
 ```
 
----
-
-## 🛠️ Local Development
+### Local Development
 
 Clone the repo and install dependencies:
 
@@ -81,8 +72,6 @@ Build the library:
 pnpm build
 ```
 
----
-
-## 📄 License
+### License
 
 This project is licensed under the [MIT License](./LICENSE).
