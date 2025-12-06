@@ -7,10 +7,10 @@ on:
 
 jobs:
   # =======================
-  # 1. LINT + FORMAT
+  # 1. LINT
   # =======================
   lint:
-    name: Lint & Format
+    name: Lint
     runs-on: ubuntu-latest
 
     steps:
