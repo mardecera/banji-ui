@@ -34,7 +34,7 @@ jobs:
 
       # --- Tests ---
       - name: Run unit tests
-        run: pnpm test:unit
+        run: pnpm unit:test
 
       # --- Builds ---
       - name: Build library
