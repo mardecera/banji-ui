@@ -30,7 +30,7 @@ jobs:
 
       # --- Linter + Formateo ---
       - name: Run Biome check (format + lint)
-        run: pnpm biome
+        run: pnpm lint
 
       # --- Tests ---
       - name: Run unit tests
@@ -41,4 +41,4 @@ jobs:
         run: pnpm build
 
       - name: Build Storybook
-        run: pnpm build-storybook
+        run: pnpm sb:build
