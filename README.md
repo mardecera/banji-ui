@@ -1,35 +1,38 @@
-# Banji UI
-
 ![Cover](./docs/images/banner-readme.png)
+<div align="center">
+<img src="https://img.shields.io/badge/license-mit-8fbd07?style=for-the-badge">
+</div>
+<div align="center">
+A modern <strong>React component library</strong> built for creating consistent, accessible, and easy-to-use interfaces. Powered by TypeScript, Vite.
+</div>
 
-[![pnpm](https://img.shields.io/badge/pnpm-10.14.0-F69220?logo=pnpm&logoColor=fff)](https://pnpm.io/)
-![license](https://img.shields.io/github/license/mardecera/banji-ui)
+## Table of Contents
+- [Table of Contents](#table-of-contents)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Documentation](#documentation)
+- [Testing](#testing)
+- [Local Development](#local-development)
+- [License](#license)
 
-A modern **React component library** built for creating consistent, accessible, and easy-to-use interfaces. Powered by **TypeScript**, **Vite**.
+## Features
 
----
+* **Lightweight & fast** – bundled with Vite + SWC.
+* **Scoped styles** – each component imports its own CSS.
+* **Reusable components** – designed to fit any React project.
+* **TypeScript support** – strong typing for safety.
+* **Tested with Vitest + React Testing Library**.
 
-## ✨ Features
-
-* ⚡️ **Lightweight & fast** – bundled with Vite + SWC.
-* 🎨 **Scoped styles** – each component imports its own CSS.
-* 🧩 **Reusable components** – designed to fit any React project.
-* 🛡️ **TypeScript support** – strong typing for safety.
-* 🧪 **Tested with Vitest + React Testing Library**.
-
----
-
-## 📦 Installation
+## Installation
 
 With your favorite package manager:
 
 ```bash
-pnpm add banji-ui
+pnpm add banji-ui@latest
 ```
 
----
-
-## 🚀 Usage
+## Usage
 
 ```tsx
 import { Button } from "banji-ui"
@@ -39,27 +42,21 @@ export default App = () => {
 }
 ```
 
----
+## Documentation
 
-## 📚 Documentation
+> Coming soon...
 
-> 📖 Coming soon.
-
----
-
-## 🧪 Testing
+## Testing
 
 This library uses **Vitest** and **React Testing Library**.
 
 Run tests with:
 
 ```bash
-pnpm test
+pnpm unit:test
 ```
 
----
-
-## 🛠️ Local Development
+## Local Development
 
 Clone the repo and install dependencies:
 
@@ -81,8 +78,12 @@ Build the library:
 pnpm build
 ```
 
----
+Run Storybook in dev mode:
 
-## 📄 License
+```bash
+pnpm sb:dev
+```
+
+## License
 
 This project is licensed under the [MIT License](./LICENSE).

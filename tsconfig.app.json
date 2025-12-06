@@ -10,7 +10,6 @@
 			"banji-ui": ["./lib/main.ts"],
 			"@lib/*": ["./lib/*"]
 		},
-
 		/* Bundler mode */
 		"moduleResolution": "bundler",
 		"allowImportingTsExtensions": true,
@@ -18,7 +17,6 @@
 		"moduleDetection": "force",
 		"noEmit": true,
 		"jsx": "react-jsx",
-
 		/* Linting */
 		"strict": true,
 		"noUnusedLocals": true,
