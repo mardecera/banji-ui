@@ -1,6 +1,5 @@
 /// <reference types="vitest/config" />
 
-/// <reference types="vitest/config" />
 import path, { resolve } from "node:path"
 import { fileURLToPath } from "node:url"
 import { storybookTest } from "@storybook/addon-vitest/vitest-plugin"
@@ -50,7 +49,6 @@ export default defineConfig({
 		environment: "jsdom",
 		setupFiles: "./lib/setup.ts",
 		css: true,
-		// exclude: ["**/*.stories.tsx", "**/*.stories.mdx"],
 		projects: [
 			{
 				extends: true,
