@@ -1,9 +1,14 @@
+# More info: https://docs.npmjs.com/trusted-publishers
 name: Publish to npm and Create Release
 
 on:
   push:
     tags:
       - "v*"
+
+permissions:
+  id-token: write  # Required for OIDC
+  contents: read
 
 jobs:
   publish:
@@ -26,6 +31,9 @@ jobs:
           node-version: 20
           registry-url: "https://registry.npmjs.org/"
 
+      - name: Update to latest npm
+        run: npm install -g npm@latest
+
       - name: Install dependencies (pnpm)
         run: pnpm install --frozen-lockfile
 
@@ -33,9 +41,7 @@ jobs:
         run: pnpm build
 
       - name: Publish to npm
-        run: pnpm publish --no-git-checks
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npm publish --provenance --access public
 
   release:
     name: Create GitHub Release
