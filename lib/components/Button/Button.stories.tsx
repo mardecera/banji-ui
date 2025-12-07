@@ -7,24 +7,73 @@ const meta: Meta<typeof Button> = {
 	component: Button,
 	tags: ["autodocs"],
 	argTypes: {
-		type: {
-			control: { type: "select" },
-			options: ["primary", "secondary"],
-		},
 		variant: {
 			control: { type: "select" },
 			options: ["default", "outline", "text"],
+			table: {
+				defaultValue: {
+					summary: "default",
+				},
+			},
 		},
-		htmlType: {
+		type: {
 			control: { type: "select" },
 			options: ["button", "submit", "reset"],
+			table: {
+				defaultValue: {
+					summary: "button",
+				},
+			},
 		},
 		loading: {
 			control: "boolean",
+			table: {
+				defaultValue: {
+					summary: "false",
+				},
+			},
 		},
 		iconPosition: {
 			control: { type: "select" },
 			options: ["left", "right"],
+			table: {
+				defaultValue: {
+					summary: "left",
+				},
+			},
+		},
+		size: {
+			control: { type: "select" },
+			options: ["default", "sm", "lg", "icon", "icon-sm", "icon-lg"],
+			table: {
+				defaultValue: {
+					summary: "default",
+				},
+			},
+		},
+		disabled: {
+			control: "boolean",
+			table: {
+				defaultValue: {
+					summary: "false",
+				},
+			},
+		},
+		icon: {
+			control: { type: "text" },
+			table: {
+				defaultValue: {
+					summary: "null",
+				},
+			},
+		},
+		children: {
+			control: { type: "text" },
+			table: {
+				defaultValue: {
+					summary: "null",
+				},
+			},
 		},
 	},
 }
@@ -35,34 +84,41 @@ type Story = StoryObj<typeof Button>
 
 export const Default: Story = {
 	args: {
-		children: "Default Button",
+		children: "Text",
+		disabled: false,
+		variant: "default",
+		icon: "",
+		loading: false,
+		size: "default",
+		iconPosition: "left",
+		type: "button",
 	},
 }
 
-export const Primary: Story = {
+export const Outline: Story = {
 	args: {
-		children: "Primary Button",
-		type: "primary",
+		children: "Text",
+		variant: "outline",
 	},
 }
 
-export const Secondary: Story = {
+export const Text: Story = {
 	args: {
-		children: "Secondary Button",
-		type: "secondary",
+		children: "Text",
+		variant: "text",
 	},
 }
 
-export const WithIcon: Story = {
+export const Link: Story = {
 	args: {
-		children: "With Icon",
-		icon: "⭐",
+		children: "Text",
+		variant: "link",
 	},
-}
-
-export const Loading: Story = {
-	args: {
-		children: "Loading...",
-		loading: true,
-	},
+	decorators: [
+		(Story) => (
+			<div style={{ padding: 20, color: "#000000", display: "inline-block" }}>
+				<Story />
+			</div>
+		),
+	],
 }

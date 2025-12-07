@@ -20,7 +20,7 @@ describe("Button", () => {
 	})
 
 	it("passes htmlType correctly", () => {
-		render(<Button htmlType="submit">Submit</Button>)
+		render(<Button type="submit">Submit</Button>)
 		expect(screen.getByRole("button")).toHaveAttribute("type", "submit")
 	})
 })
