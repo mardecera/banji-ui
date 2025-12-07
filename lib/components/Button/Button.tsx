@@ -1,37 +1,39 @@
-import { LIBRARY_NAME } from "@lib/constants/global"
-import { cleanClass } from "@lib/utils/cleanClass"
-import type { Props } from "./Button.types"
+import GLOBAL from "@lib/constants/global"
+import { cc } from "@lib/utils/cleanClass"
+import type { ButtonProps } from "./Button.types"
 
 import "./Button.css"
+import "../../styles/global.css"
 import Spin from "../Spin/Spin"
 
-const Button = ({
-	children,
-	className,
-	icon,
-	type = "primary",
-	variant = "default",
-	htmlType = "button",
-	loading = false,
-	iconPosition = "left",
-	...props
-}: Props) => {
+const Button = (props: ButtonProps) => {
+	const {
+		icon,
+		children,
+		className,
+		type = "button",
+		size = GLOBAL.DEFAULT,
+		variant = GLOBAL.DEFAULT,
+		iconPosition = GLOBAL.BUTTON.POSITION.LEFT,
+		loading = false,
+		...rest
+	} = props
+
+	const classButton = `${GLOBAL.LIBRARY_NAME}-button`
+	const classVariant = `${GLOBAL.LIBRARY_NAME}-button__${variant}`
+	const classSize = `${GLOBAL.LIBRARY_NAME}-button__size-${size}`
+	const hasIconLeft = iconPosition === GLOBAL.BUTTON.POSITION.LEFT && icon && !loading
+	const hasIconRight = iconPosition === GLOBAL.BUTTON.POSITION.RIGHT && icon
+
 	return (
-		<button
-			{...props}
-			className={cleanClass(
-				`${LIBRARY_NAME}-button`,
-				`${LIBRARY_NAME}-button__${type}-${variant}`,
-				`${className}`,
-			)}
-			type={htmlType}
-		>
-			{icon && iconPosition === "left" && !loading && icon}
+		<button {...rest} type={type} className={cc(classButton, classVariant, classSize, className)}>
+			{hasIconLeft && <span className="icon">{icon}</span>}
 			{loading && <Spin />}
 			{children}
-			{icon && iconPosition === "right" && icon}
+			{hasIconRight && <span className="icon">{icon}</span>}
 		</button>
 	)
 }
 
+Button.displayName = "Button"
 export default Button

@@ -1,31 +1,137 @@
-.banji-ui-button {
-	background-color: #010005;
-	color: #ffffff;
+.banji-button {
+	color: var(--color-white);
+	background-color: transparent;
 	border: none;
-	padding: 0.5rem 1rem;
-	border-radius: 0.25rem;
 	cursor: pointer;
 	font-size: 1rem;
 	font-weight: 500;
 	transition: all 0.2s ease-in-out;
-	height: 40px;
 	display: flex;
 	align-items: center;
+	justify-content: center;
 	gap: 0.5rem;
 }
 
-.banji-ui-button__primary-default:hover {
-	background-color: #100c22;
-	color: #f9f9fc;
+/* DEFFAULT */
+
+.banji-button__default {
+	background-color: var(--color-main-900);
 }
 
-.banji-ui-button__primary-default:active {
-	background-color: #140a3d;
-	color: #d9d9e7;
+.banji-button__default:hover {
+	background-color: var(--color-main-950);
+	color: var(--color-main-100);
 }
 
-.banji-ui-button__primary-default:disabled {
-	background-color: #999999;
-	color: #dadada;
+.banji-button__default:active {
+	background-color: var(--color-main-800);
+	color: var(--color-main-200);
+}
+
+.banji-button__default:disabled {
+	background-color: var(--color-gray-400);
+	color: var(--color-gray-200);
 	cursor: not-allowed;
+	opacity: 0.5;
+}
+
+/* OUTLINE */
+
+.banji-button__outline {
+	border: 2px solid var(--color-main-900);
+	color: var(--color-main-900);
+}
+
+.banji-button__outline:hover {
+	background-color: var(--color-main-100);
+}
+
+.banji-button__outline:active {
+	background-color: var(--color-main-200);
+}
+
+.banji-button__outline:disabled {
+	background-color: var(--color-gray-100);
+	border-color: var(--color-gray-300);
+	color: var(--color-gray-400);
+	cursor: not-allowed;
+	opacity: 0.5;
+}
+
+/* TEXT */
+
+.banji-button__text {
+	color: var(--color-main-800);
+}
+
+.banji-button__text:hover {
+	background-color: var(--color-main-100);
+}
+
+.banji-button__text:active {
+	background-color: var(--color-main-200);
+}
+
+.banji-button__text:disabled {
+	background-color: var(--color-gray-100);
+	color: var(--color-gray-400);
+	cursor: not-allowed;
+	opacity: 0.5;
+}
+
+/* LINK */
+
+.banji-button__link {
+	padding: 0;
+	color: inherit;
+	display: inline;
+	height: fit-content;
+}
+
+/* SIZE ICON */
+
+.banji-button__size-sm {
+	font-size: 14px;
+	padding: 0.25rem 0.5rem;
+	border-radius: 0.25rem;
+}
+
+.banji-button__size-default {
+	font-size: 16px;
+	padding: 0.5rem 1rem;
+	height: 40px;
+	border-radius: 0.5rem;
+}
+
+.banji-button__size-lg {
+	font-size: 18px;
+	padding: 0.75rem 1.5rem;
+	border-radius: 0.6rem;
+}
+
+.banji-button__size-icon-sm {
+	font-size: 14px;
+	width: 27px;
+	height: 27px;
+	border-radius: 0.25rem;
+}
+
+.banji-button__size-icon {
+	width: 40px;
+	height: 40px;
+	border-radius: 0.5rem;
+}
+
+.banji-button__size-icon-lg {
+	width: 48px;
+	height: 48px;
+	border-radius: 0.6rem;
+}
+
+/* ICON */
+
+.icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
