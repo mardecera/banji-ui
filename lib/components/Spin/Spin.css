@@ -1,7 +1,8 @@
 .binland-spin {
 	width: 0.875rem;
 	height: 0.875rem;
-	border: 0.125rem solid #fff;
+	border: 0.125rem solid;
+	border-color: inherit;
 	border-bottom-color: transparent;
 	border-radius: 50%;
 	display: inline-block;
