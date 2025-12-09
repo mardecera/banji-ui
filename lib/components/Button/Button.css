@@ -10,6 +10,7 @@
 	align-items: center;
 	justify-content: center;
 	gap: 0.5rem;
+	corner-shape: squircle;
 }
 
 /* DEFFAULT */
@@ -93,39 +94,39 @@
 .banji-button__size-sm {
 	font-size: 14px;
 	padding: 0.25rem 0.5rem;
-	border-radius: 0.25rem;
+	border-radius: 1rem;
 }
 
 .banji-button__size-default {
 	font-size: 16px;
 	padding: 0.5rem 1rem;
 	height: 40px;
-	border-radius: 0.5rem;
+	border-radius: 2rem;
 }
 
 .banji-button__size-lg {
 	font-size: 18px;
 	padding: 0.75rem 1.5rem;
-	border-radius: 0.6rem;
+	border-radius: 3rem;
 }
 
 .banji-button__size-icon-sm {
 	font-size: 14px;
 	width: 27px;
 	height: 27px;
-	border-radius: 0.25rem;
+	border-radius: 1rem;
 }
 
 .banji-button__size-icon {
 	width: 40px;
 	height: 40px;
-	border-radius: 0.5rem;
+	border-radius: 2rem;
 }
 
 .banji-button__size-icon-lg {
 	width: 48px;
 	height: 48px;
-	border-radius: 0.6rem;
+	border-radius: 3rem;
 }
 
 /* ICON */
