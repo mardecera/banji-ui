@@ -12,4 +12,5 @@ export type ButtonProps = ReactButtonProps & {
 	icon?: React.ReactNode
 	iconPosition?: IconPosition
 	loading?: boolean
+	noStyles?: boolean
 }
