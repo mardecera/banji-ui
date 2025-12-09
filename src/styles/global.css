@@ -43,7 +43,6 @@ body {
 	background-color: #f3f3f7b4;
 }
 
-
 .table thead tr th {
 	font-weight: bold;
 }
@@ -59,7 +58,7 @@ body {
 	font-size: 12px;
 }
 
-.container{
+.container {
 	max-width: 1080px;
 	margin: 0 auto;
 	display: flex;
