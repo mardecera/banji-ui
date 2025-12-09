@@ -4,7 +4,7 @@
 	"type": "module",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/mardecera/banji-ui"
+		"url": "git+https://github.com/mardecera/banji-ui.git"
 	},
 	"files": [
 		"dist"
