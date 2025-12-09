@@ -38,7 +38,7 @@ pnpm add banji-ui@latest
 import { Button } from "banji-ui"
 
 export default App = () => {
-  return <Button variant="primary">Click me</Button>
+  return <Button>Click me</Button>
 }
 ```
 
