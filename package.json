@@ -1,6 +1,6 @@
 {
 	"name": "banji-ui",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"private": false,
 	"type": "module",
 	"description": "Libreria de componentes React con landing y Storybook.",
