@@ -15,7 +15,12 @@
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,
 		"noFallthroughCasesInSwitch": true,
-		"types": ["node", "vitest/globals", "@testing-library/jest-dom"]
+		"types": ["node", "vitest/globals", "@testing-library/jest-dom"],
+		"paths": {
+			"@/*": ["./src/*"],
+			"@banji-ui": ["./src/lib"],
+			"@banji-ui/*": ["./src/lib/*"]
+		}
 	},
 	"include": ["src", ".storybook", "vite.config.ts"]
 }

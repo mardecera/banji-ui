@@ -7,6 +7,10 @@
 		"outDir": "./dist-lib",
 		"noEmit": false
 	},
-	"include": ["src/lib/**/*.ts", "src/components/**/*.ts", "src/components/**/*.tsx"],
+	"include": [
+		"src/lib/**/*.ts",
+		"src/components/**/*.ts",
+		"src/components/**/*.tsx"
+	],
 	"exclude": ["src/**/*.stories.*", "src/**/*.test.*"]
 }
