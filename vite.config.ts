@@ -48,6 +48,12 @@ export default defineConfig(({ mode }) => {
 						}
 					}
 				}
-			: undefined
+			: undefined,
+		resolve: {
+			alias: {
+				"@": path.resolve(__dirname, "./src"),
+				"@banji-ui": path.resolve(__dirname, "./src/lib")
+			}
+		}
 	}
 })
