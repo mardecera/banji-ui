@@ -76,7 +76,6 @@
 		"vite": "^5.4.18",
 		"vite-plugin-dts": "^4.5.3",
 		"vitest": "^2.1.9",
-		"banji-ui": "file:banji-ui-1.0.3.tgz",
 		"prism-react-renderer": "^2.4.1",
 		"react-router-dom": "^7.14.2"
 	}

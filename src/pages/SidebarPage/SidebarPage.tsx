@@ -1,4 +1,4 @@
-import { Sandbox, Sidebar, Typography } from "banji-ui"
+import { Sandbox, Sidebar, Typography } from "@/lib"
 import { code, components } from "./SidebarPage.const"
 
 const SidebarPage = () => {
