@@ -1,4 +1,4 @@
-import { Badge, Sandbox, Typography } from "banji-ui"
+import { Badge, Sandbox, Typography } from "@/lib"
 import { code } from "./BadgePage.const"
 
 const BadgePage = () => {
