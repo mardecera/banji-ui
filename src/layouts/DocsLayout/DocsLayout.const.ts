@@ -1,4 +1,4 @@
-import type { SidebarItemProps } from "@banji-ui"
+import type { SidebarItemProps } from "banji-ui"
 
 export const components: SidebarItemProps[] = [
 	{
