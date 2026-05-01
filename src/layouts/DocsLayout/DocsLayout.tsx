@@ -1,6 +1,6 @@
 import { Outlet, useLocation } from "react-router-dom"
 import { components } from "./DocsLayout.const"
-import { Sidebar } from "@banji-ui"
+import { Sidebar } from "banji-ui"
 
 const DocsLayout = () => {
 	const { pathname } = useLocation()
