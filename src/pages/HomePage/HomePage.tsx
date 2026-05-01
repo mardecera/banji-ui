@@ -1,4 +1,4 @@
-import { Button } from "banji-ui"
+import { Button } from "@/lib"
 
 const HomePage = () => {
 	return (
