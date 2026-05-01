@@ -26,7 +26,7 @@
 		"dev": "concurrently -k -n WEB,STORYBOOK -c cyan,magenta \"vite\" \"storybook dev -p 6006 --no-open\"",
 		"dev:web": "vite",
 		"start": "vite preview --host",
-		"build": "pnpm clean:web && pnpm build:web && pnpm build:storybook:web",
+		"build": "pnpm clean:web && pnpm build:lib && pnpm build:web && pnpm build:storybook:web",
 		"build:web": "vite build",
 		"preview": "vite preview",
 		"pack:lib": "pnpm build:lib && pnpm pack",
@@ -76,7 +76,7 @@
 		"vite": "^5.4.18",
 		"vite-plugin-dts": "^4.5.3",
 		"vitest": "^2.1.9",
-		"banji-ui": "file:banji-ui-1.0.1.tgz",
+		"banji-ui": "file:banji-ui-1.0.3.tgz",
 		"prism-react-renderer": "^2.4.1",
 		"react-router-dom": "^7.14.2"
 	}
