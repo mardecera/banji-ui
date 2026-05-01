@@ -3,6 +3,11 @@
 	"version": "1.0.3",
 	"private": false,
 	"type": "module",
+	"homepage": "https://banji.mardecera.com/",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/mardecera/banji-ui"
+	},
 	"description": "Libreria de componentes React con landing y Storybook.",
 	"keywords": ["react", "components", "vite", "storybook", "library"],
 	"license": "MIT",
