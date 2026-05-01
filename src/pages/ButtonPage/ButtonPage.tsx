@@ -1,4 +1,4 @@
-import { Button, Sandbox, Typography } from "@banji-ui"
+import { Button, Sandbox, Typography } from "banji-ui"
 import { code } from "./ButtonPage.const"
 
 const ButtonPage = () => {

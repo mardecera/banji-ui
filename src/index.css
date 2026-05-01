@@ -1,9 +1,4 @@
 @import "tailwindcss";
-@source "./App.tsx";
-@source "./pages";
-@source "./components";
-@source "./routes";
-@source "./layouts";
 
 :root {
 	line-height: 1.5;

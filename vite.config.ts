@@ -31,6 +31,7 @@ export default defineConfig(({ mode }) => {
 		build: isLibraryMode
 			? {
 					outDir: "dist-lib",
+					minify: "esbuild",
 					sourcemap: true,
 					lib: {
 						entry: path.resolve(rootDir, "src/lib/index.ts"),
@@ -39,7 +40,13 @@ export default defineConfig(({ mode }) => {
 						formats: ["es", "cjs"]
 					},
 					rollupOptions: {
-						external: ["react", "react-dom"],
+						external: [
+							"react",
+							"react-dom",
+							"clsx",
+							"tailwind-merge",
+							"tailwind-variants"
+						],
 						output: {
 							globals: {
 								react: "React",
@@ -51,8 +58,7 @@ export default defineConfig(({ mode }) => {
 			: undefined,
 		resolve: {
 			alias: {
-				"@": path.resolve(__dirname, "./src"),
-				"@banji-ui": path.resolve(__dirname, "./src/lib")
+				"@": path.resolve(__dirname, "./src")
 			}
 		}
 	}
