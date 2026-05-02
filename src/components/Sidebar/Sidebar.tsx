@@ -12,7 +12,12 @@ const SidebarRoot = (props: Props) => {
 
 	return (
 		<SidebarContext.Provider value={undefined}>
-			<aside className={cn("bg-white w-fit p-2 rounded-2xl h-fit", className)}>
+			<aside
+				className={cn(
+					"bg-white w-fit p-2 rounded-2xl h-fit space-y-2",
+					className
+				)}
+			>
 				{children}
 			</aside>
 		</SidebarContext.Provider>

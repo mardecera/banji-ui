@@ -4,16 +4,24 @@ import Badge from "./Badge"
 const meta: Meta<typeof Badge> = {
 	title: "Components/Badge",
 	component: Badge,
-	args: {
-		label: "Nuevo",
-		tone: "neutral"
+	argTypes: {
+		label: { control: "text" },
+		tone: {
+			control: "select",
+			options: ["neutral", "success", "warning", "danger"]
+		}
 	}
 }
 
 export default meta
 type Story = StoryObj<typeof Badge>
 
-export const Neutral: Story = {}
+export const Neutral: Story = {
+	args: {
+		label: "Nuevo",
+		tone: "neutral"
+	}
+}
 
 export const Success: Story = {
 	args: {

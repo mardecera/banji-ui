@@ -1,4 +1,4 @@
-import { Outlet, useLocation } from "react-router-dom"
+import { Link, Outlet, useLocation } from "react-router-dom"
 import { components } from "./DocsLayout.const"
 import { Sidebar } from "@/lib"
 
@@ -10,17 +10,19 @@ const DocsLayout = () => {
 			<div className="flex gap-4 max-w-245">
 				<Sidebar>
 					<Sidebar.Content>
-						<Sidebar.Item href="/docs" isActive={pathname === "/docs"}>
-							Introducción
+						<Sidebar.Item isActive={pathname === "/docs"} asChild>
+							<Link to="/docs" className="flex">
+								Introducción
+							</Link>
 						</Sidebar.Item>
 						<Sidebar.Group title="Componentes">
 							{components.map((component) => (
 								<Sidebar.Item
 									key={component.id}
-									href={component.href}
 									isActive={component.href === pathname}
+									asChild
 								>
-									{component.children}
+									<Link to={component.href}>{component.children}</Link>
 								</Sidebar.Item>
 							))}
 						</Sidebar.Group>

@@ -10,6 +10,7 @@ import SidebarPage from "@/pages/SidebarPage/SidebarPage"
 export type RootLoaderData = {
 	badgeStoryUrl: string
 	buttonStoryUrl: string
+	sidebarStoryUrl: string
 }
 
 function rootLoader(): RootLoaderData {
@@ -18,8 +19,9 @@ function rootLoader(): RootLoaderData {
 		: "/storybook"
 
 	return {
-		buttonStoryUrl: `${storybookBase}/?path=/story/components-button--solid`,
-		badgeStoryUrl: `${storybookBase}/?path=/story/components-badge--neutral`
+		buttonStoryUrl: `${storybookBase}/?path=/story/components-button--default`,
+		badgeStoryUrl: `${storybookBase}/?path=/story/components-badge--neutral`,
+		sidebarStoryUrl: `${storybookBase}/?path=/story/components-sidebar--example`
 	}
 }
 

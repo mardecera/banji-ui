@@ -5,11 +5,9 @@ const Code = (props: Props) => {
 	const { code } = props
 
 	return (
-		<pre className="">
-			<code>
-				<CodeBlock code={code} />
-			</code>
-		</pre>
+		<div className="overflow-scroll w-full">
+			<CodeBlock code={code} withNumbers />
+		</div>
 	)
 }
 
