@@ -6,7 +6,9 @@ const SandboxRoot = (props: Props) => {
 	const { children } = props
 
 	return (
-		<div className="bg-gray-200 rounded-2xl overflow-hidden">{children}</div>
+		<div className="bg-gray-200 rounded-2xl overflow-hidden w-full">
+			{children}
+		</div>
 	)
 }
 

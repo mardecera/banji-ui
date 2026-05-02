@@ -21,5 +21,6 @@
 	},
 	"[css]": {
 		"editor.defaultFormatter": "biomejs.biome"
-	}
+	},
+	"editor.tabSize": 2
 }

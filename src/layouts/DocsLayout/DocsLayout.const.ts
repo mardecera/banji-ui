@@ -1,6 +1,4 @@
-import type { SidebarItemProps } from "@/lib"
-
-export const components: SidebarItemProps[] = [
+export const components = [
 	{
 		id: "button",
 		children: "Button",
