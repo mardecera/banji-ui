@@ -1,10 +1,27 @@
 import type { AnchorHTMLAttributes, ButtonHTMLAttributes } from "react"
 
-export type ButtonVariant = "solid" | "ghost"
+export type ButtonVariant =
+	| "default"
+	| "outline"
+	| "secondary"
+	| "ghost"
+	| "destructive"
+	| "link"
+
+export type ButtonSize =
+	| "xs"
+	| "sm"
+	| "default"
+	| "lg"
+	| "icon-xs"
+	| "icon-sm"
+	| "icon"
+	| "icon-lg"
 
 type BaseButtonProps = {
-	label: string
+	children: React.ReactNode
 	variant?: ButtonVariant
+	size?: ButtonSize
 }
 
 export type ButtonAsButtonProps = BaseButtonProps &

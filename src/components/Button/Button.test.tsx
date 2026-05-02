@@ -4,7 +4,7 @@ import Button from "./Button"
 
 describe("Button", () => {
 	it("renders the label", () => {
-		render(<Button label="Comprar" />)
+		render(<Button>Comprar</Button>)
 		expect(screen.getByRole("button", { name: "Comprar" })).toBeInTheDocument()
 	})
 })

@@ -1,8 +1,6 @@
 export const code = `
-import { Badge } from '@banji-ui';
+import { Badge } from 'banji-ui'
 
-const BadgePage = () => {
-	return (
-		<Badge label="Beta" />
-	)
+const Page = () => {
+	return <Badge label="Beta" />
 }`

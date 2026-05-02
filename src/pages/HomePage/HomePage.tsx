@@ -15,7 +15,7 @@ const HomePage = () => {
 				muestra ejemplos prácticos.
 			</p>
 			<div className="flex flex-wrap gap-3">
-				<Button label="Ver Documentación" href="/docs" />
+				<Button href="/docs">Ver Documentación</Button>
 			</div>
 		</section>
 	)
