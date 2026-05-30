@@ -24,6 +24,7 @@ const SidebarItem = (props: Props) => {
 			href={href}
 			className={cn(
 				"hover:bg-gray-100 py-2 px-4 rounded-xl text-[14px] cursor-pointer",
+				"hover:bg-gray-100 py-2 px-4 rounded-xl text-[14px] cursor-pointer",
 				className,
 				checkActiveStyle({ active: isActive }),
 				isActive && activeClassName

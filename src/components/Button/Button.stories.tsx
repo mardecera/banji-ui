@@ -82,8 +82,8 @@ export const Link: Story = {
 		rel: { control: "text" }
 	},
 	args: {
-		children: "Open Docs",
 		variant: "link",
+		children: "Open Docs",
 		href: "https://storybook.js.org",
 		rel: "noopener noreferrer",
 		target: "_blank",

@@ -41,6 +41,7 @@ const Button = (props: ButtonProps) => {
 	return (
 		<button {...buttonProps} className={className}>
 			{children}
+			{children}
 		</button>
 	);
 };
