@@ -1,4 +1,4 @@
-import { tv } from "tailwind-variants"
+import { tv } from "tailwind-variants";
 
 export const checkActiveStyle = tv({
 	variants: {
@@ -10,4 +10,4 @@ export const checkActiveStyle = tv({
 	defaultVariants: {
 		active: false
 	}
-})
+});

@@ -1,30 +1,31 @@
-import { Highlight } from "prism-react-renderer"
-import { themes } from "prism-react-renderer"
-import type { CodeBlockProps as Props } from "./CodeBlock.types"
-import { cn } from "@/utils/tailwind.utils"
-import { copyToClipboard } from "@/utils/clipboard.utils"
-import { useState } from "react"
-import Copy from "../Icons/Copy/Copy"
-import Check from "../Icons/Check/Check"
+import { Highlight } from "prism-react-renderer";
+import { useState } from "react";
 
-const theme = themes.oneDark
+import { copyToClipboard } from "@/utils/clipboard.utils";
+import { cn } from "@/utils/tailwind.utils";
+import { minimunDark } from "./Codeblock.themes";
+import type { CodeBlockProps as Props } from "./CodeBlock.types";
+import Check from "../Icons/Check/Check";
+import Copy from "../Icons/Copy/Copy";
+
+const theme = minimunDark;
 
 const CodeBlock = (props: Props) => {
-	const { code, language = "tsx", withNumbers = false } = props
+	const { code, language = "tsx", withNumbers = false } = props;
 
-	const [copied, setCopied] = useState(false)
+	const [copied, setCopied] = useState(false);
 
 	const handleCopy = async (code: string) => {
-		const ok = await copyToClipboard(code)
+		const ok = await copyToClipboard(code);
 
 		if (ok) {
-			setCopied(true)
-			setTimeout(() => setCopied(false), 2000)
+			setCopied(true);
+			setTimeout(() => setCopied(false), 2000);
 		}
-	}
+	};
 
 	return (
-		<div className="relative">
+		<div className="relative font-medium">
 			<button
 				onClick={() => handleCopy(code)}
 				type="button"
@@ -74,7 +75,7 @@ const CodeBlock = (props: Props) => {
 				)}
 			</Highlight>
 		</div>
-	)
-}
+	);
+};
 
-export default CodeBlock
+export default CodeBlock;

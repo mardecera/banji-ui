@@ -1,4 +1,4 @@
 export type SidebarProps = {
-	children: React.ReactNode
-	className?: string
-}
+	children: React.ReactNode;
+	className?: string;
+};

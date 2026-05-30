@@ -1,4 +1,4 @@
-import { createIcon, type IconNode } from "../createIcon"
+import { type IconNode, createIcon } from "../createIcon";
 
 const circleAlertNode: IconNode = [
 	[
@@ -8,8 +8,8 @@ const circleAlertNode: IconNode = [
 			fill: "currentColor"
 		}
 	]
-] as const
+] as const;
 
-const CircleAlert = createIcon("Circle Alert", circleAlertNode, "fill")
+const CircleAlert = createIcon("Circle Alert", circleAlertNode, "fill");
 
-export default CircleAlert
+export default CircleAlert;

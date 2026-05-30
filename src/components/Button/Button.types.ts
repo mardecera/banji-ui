@@ -1,4 +1,4 @@
-import type { AnchorHTMLAttributes, ButtonHTMLAttributes } from "react"
+import type { AnchorHTMLAttributes, ButtonHTMLAttributes } from "react";
 
 export type ButtonVariant =
 	| "default"
@@ -6,7 +6,7 @@ export type ButtonVariant =
 	| "secondary"
 	| "ghost"
 	| "destructive"
-	| "link"
+	| "link";
 
 export type ButtonSize =
 	| "xs"
@@ -16,22 +16,23 @@ export type ButtonSize =
 	| "icon-xs"
 	| "icon-sm"
 	| "icon"
-	| "icon-lg"
+	| "icon-lg";
 
 type BaseButtonProps = {
-	children: React.ReactNode
-	variant?: ButtonVariant
-	size?: ButtonSize
-}
+	children: React.ReactNode;
+	variant?: ButtonVariant;
+	size?: ButtonSize;
+	asChild?: boolean;
+};
 
 export type ButtonAsButtonProps = BaseButtonProps &
 	ButtonHTMLAttributes<HTMLButtonElement> & {
-		href?: undefined
-	}
+		href?: undefined;
+	};
 
 export type ButtonAsLinkProps = BaseButtonProps &
 	AnchorHTMLAttributes<HTMLAnchorElement> & {
-		href: string
-	}
+		href: string;
+	};
 
-export type ButtonProps = ButtonAsButtonProps | ButtonAsLinkProps
+export type ButtonProps = ButtonAsButtonProps | ButtonAsLinkProps;

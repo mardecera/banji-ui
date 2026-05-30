@@ -1,4 +1,4 @@
-import { tv } from "tailwind-variants"
+import { tv } from "tailwind-variants";
 
 export const getBadgeStyles = tv({
 	base: "inline-flex items-center rounded-full border px-2.5 py-1 text-xs leading-none font-bold tracking-[0.01em]",
@@ -13,4 +13,4 @@ export const getBadgeStyles = tv({
 	defaultVariants: {
 		tone: "neutral"
 	}
-})
+});

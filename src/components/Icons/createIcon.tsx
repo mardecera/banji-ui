@@ -1,17 +1,17 @@
-import React from "react"
+import React from "react";
 
-export type IconMode = "outline" | "fill"
+export type IconMode = "outline" | "fill";
 
 export type IconNode = [
 	tag: keyof JSX.IntrinsicElements,
 	attrs: Record<string, unknown>
-][]
+][];
 
 export type IconProps = React.SVGProps<SVGSVGElement> & {
-	size?: number | string
-	color?: string
-	strokeWidth?: number
-}
+	size?: number | string;
+	color?: string;
+	strokeWidth?: number;
+};
 
 export const createIcon = (
 	name: string,
@@ -44,11 +44,11 @@ export const createIcon = (
 					)}
 					{children}
 				</svg>
-			)
+			);
 		}
-	)
+	);
 
-	Component.displayName = name
+	Component.displayName = name;
 
-	return Component
-}
+	return Component;
+};

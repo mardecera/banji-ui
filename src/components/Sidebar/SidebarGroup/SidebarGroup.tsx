@@ -1,7 +1,7 @@
-import type { GroupProps as Props } from "./SidebarGroup.types"
+import type { GroupProps as Props } from "./SidebarGroup.types";
 
 const SidebarGroup = (props: Props) => {
-	const { title, children } = props
+	const { title, children } = props;
 
 	return (
 		<div className="space-y-1">
@@ -10,7 +10,7 @@ const SidebarGroup = (props: Props) => {
 			)}
 			<div className="flex flex-col gap-1">{children}</div>
 		</div>
-	)
-}
+	);
+};
 
-export default SidebarGroup
+export default SidebarGroup;

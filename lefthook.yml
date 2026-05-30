@@ -1,0 +1,19 @@
+pre-commit:
+  parallel: false
+  jobs:
+    - name: format
+      run: "pnpm format # {all_files}"
+    - name: lint
+      run: "pnpm lint # {all_files}"
+    - name: typecheck
+      run: "pnpm typecheck # {all_files}"
+
+pre-push:
+  parallel: false
+  jobs:
+    - name: format
+      run: "pnpm format # {all_files}"
+    - name: lint
+      run: "pnpm lint # {all_files}"
+    - name: typecheck
+      run: "pnpm typecheck # {all_files}"

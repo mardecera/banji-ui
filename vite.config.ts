@@ -1,14 +1,14 @@
-import path from "node:path"
-import { fileURLToPath } from "node:url"
-import tailwindcss from "@tailwindcss/vite"
-import react from "@vitejs/plugin-react"
-import { defineConfig } from "vite"
-import dts from "vite-plugin-dts"
+import tailwindcss from "@tailwindcss/vite";
+import react from "@vitejs/plugin-react";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+import { defineConfig } from "vite";
+import dts from "vite-plugin-dts";
 
-const rootDir = path.dirname(fileURLToPath(import.meta.url))
+const rootDir = path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig(({ mode }) => {
-	const isLibraryMode = mode === "lib"
+	const isLibraryMode = mode === "lib";
 
 	return {
 		plugins: [
@@ -58,8 +58,9 @@ export default defineConfig(({ mode }) => {
 			: undefined,
 		resolve: {
 			alias: {
-				"@": path.resolve(__dirname, "./src")
+				"@": path.resolve(__dirname, "./src"),
+				"banji-ui": path.resolve(__dirname, "./src/lib/index.ts")
 			}
 		}
-	}
-})
+	};
+});

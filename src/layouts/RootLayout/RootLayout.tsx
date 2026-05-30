@@ -1,6 +1,6 @@
-import { NavLink, Outlet } from "react-router-dom"
+import { NavLink, Outlet } from "react-router-dom";
 
-import { activeStyle } from "./RootLayout.const"
+import { activeStyle } from "./RootLayout.const";
 
 const RootLayout = () => {
 	return (
@@ -35,7 +35,7 @@ const RootLayout = () => {
 				</div>
 			</section>
 		</main>
-	)
-}
+	);
+};
 
-export default RootLayout
+export default RootLayout;

@@ -1,27 +1,36 @@
-import React from "react"
-import { cn } from "../../../utils/tailwind.utils"
-import { checkActiveStyle } from "./SidebarItem.helpers"
-import type { SidebarItem as Props } from "./SidebarItem.types"
+import React from "react";
+
+import { checkActiveStyle } from "./SidebarItem.helpers";
+import type { SidebarItem as Props } from "./SidebarItem.types";
+import { cn } from "../../../utils/tailwind.utils";
 
 const SidebarItem = (props: Props) => {
-	const { href, children, className, activeClassName, isActive } = props
-	const { asChild = false } = props
+	const { href, children, className, activeClassName, isActive } = props;
+	const { asChild = false } = props;
 
 	if (asChild) {
-		return React.cloneElement(children as React.ReactElement, {
+		const child = React.Children.only(children);
+
+		if (!React.isValidElement(child)) {
+			return null;
+		}
+
+		return React.cloneElement(child, {
 			className: cn(
 				"hover:bg-gray-100 py-2 px-4 rounded-xl text-[14px] cursor-pointer",
+				child.props.className,
 				className,
 				checkActiveStyle({ active: isActive }),
 				isActive && activeClassName
 			)
-		})
+		});
 	}
 
 	return (
 		<a
 			href={href}
 			className={cn(
+				"hover:bg-gray-100 py-2 px-4 rounded-xl text-[14px] cursor-pointer",
 				"hover:bg-gray-100 py-2 px-4 rounded-xl text-[14px] cursor-pointer",
 				className,
 				checkActiveStyle({ active: isActive }),
@@ -30,7 +39,7 @@ const SidebarItem = (props: Props) => {
 		>
 			{children}
 		</a>
-	)
-}
+	);
+};
 
-export default SidebarItem
+export default SidebarItem;
