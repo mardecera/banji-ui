@@ -1,4 +1,4 @@
-import { tv } from "tailwind-variants"
+import { tv } from "tailwind-variants";
 
 export const activeStyle = tv({
 	base: "rounded-full px-3.5 py-2 text-sm font-semibold no-underline transition-colors",
@@ -11,4 +11,4 @@ export const activeStyle = tv({
 	defaultVariants: {
 		active: false
 	}
-})
+});

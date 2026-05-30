@@ -14,7 +14,7 @@ const DocsPage = () => {
 				</p>
 			</header>
 		</section>
-	)
-}
+	);
+};
 
-export default DocsPage
+export default DocsPage;

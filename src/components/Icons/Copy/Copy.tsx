@@ -1,4 +1,4 @@
-import { createIcon, type IconNode } from "../createIcon"
+import { type IconNode, createIcon } from "../createIcon";
 
 const CopyNode: IconNode = [
 	[
@@ -13,8 +13,8 @@ const CopyNode: IconNode = [
 			d: "M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1"
 		}
 	]
-] as const
+] as const;
 
-const Copy = createIcon("Copy", CopyNode, "outline")
+const Copy = createIcon("Copy", CopyNode, "outline");
 
-export default Copy
+export default Copy;

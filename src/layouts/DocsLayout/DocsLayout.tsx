@@ -1,9 +1,10 @@
-import { Link, Outlet, useLocation } from "react-router-dom"
-import { components } from "./DocsLayout.const"
-import { Sidebar } from "@/lib"
+import { Sidebar } from "banji-ui";
+import { Link, Outlet, useLocation } from "react-router-dom";
+
+import { components } from "./DocsLayout.const";
 
 const DocsLayout = () => {
-	const { pathname } = useLocation()
+	const { pathname } = useLocation();
 
 	return (
 		<div>
@@ -33,7 +34,7 @@ const DocsLayout = () => {
 				</div>
 			</div>
 		</div>
-	)
-}
+	);
+};
 
-export default DocsLayout
+export default DocsLayout;

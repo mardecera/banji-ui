@@ -1,8 +1,9 @@
-import { Button } from "@/lib"
+import { Button } from "banji-ui";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
 	return (
-		<section className="w-full max-w-210 rounded-3xl bg-white/85 p-12 shadow-[0_12px_50px_rgba(15,23,42,0.14)] backdrop-blur-sm">
+		<section className="w-full rounded-3xl bg-white/85 p-12 shadow-[0_12px_50px_rgba(15,23,42,0.14)] backdrop-blur-sm">
 			<p className="m-0 text-[0.8rem] tracking-widest text-teal-700 uppercase">
 				Banji UI
 			</p>
@@ -15,10 +16,12 @@ const HomePage = () => {
 				muestra ejemplos prácticos.
 			</p>
 			<div className="flex flex-wrap gap-3">
-				<Button href="/docs">Ver Documentación</Button>
+				<Button asChild>
+					<Link to="/docs">Ver Documentación</Link>
+				</Button>
 			</div>
 		</section>
-	)
-}
+	);
+};
 
-export default HomePage
+export default HomePage;

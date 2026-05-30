@@ -17,7 +17,8 @@
 		"noFallthroughCasesInSwitch": true,
 		"types": ["node", "vitest/globals", "@testing-library/jest-dom"],
 		"paths": {
-			"@/*": ["./src/*"]
+			"@/*": ["./src/*"],
+			"banji-ui": ["./src/lib/index.ts"]
 		}
 	},
 	"include": ["src", ".storybook", "vite.config.ts"]

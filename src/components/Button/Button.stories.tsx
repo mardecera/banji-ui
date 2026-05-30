@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from "@storybook/react"
-import Button from "./Button"
+import Button from "./Button";
+import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Button> = {
 	title: "Components/Button",
@@ -31,10 +31,10 @@ const meta: Meta<typeof Button> = {
 			]
 		}
 	}
-}
+};
 
-export default meta
-type Story = StoryObj<typeof Button>
+export default meta;
+type Story = StoryObj<typeof Button>;
 
 export const Default: Story = {
 	args: {
@@ -42,7 +42,7 @@ export const Default: Story = {
 		variant: "default",
 		size: "default"
 	}
-}
+};
 
 export const Secondary: Story = {
 	args: {
@@ -50,7 +50,7 @@ export const Secondary: Story = {
 		variant: "secondary",
 		size: "default"
 	}
-}
+};
 
 export const Outline: Story = {
 	args: {
@@ -58,7 +58,7 @@ export const Outline: Story = {
 		variant: "outline",
 		size: "default"
 	}
-}
+};
 
 export const Destructive: Story = {
 	args: {
@@ -66,7 +66,7 @@ export const Destructive: Story = {
 		variant: "destructive",
 		size: "default"
 	}
-}
+};
 
 export const Icon: Story = {
 	args: {
@@ -74,7 +74,7 @@ export const Icon: Story = {
 		variant: "default",
 		size: "icon"
 	}
-}
+};
 
 export const Link: Story = {
 	argTypes: {
@@ -90,4 +90,4 @@ export const Link: Story = {
 		size: "default",
 		className: "text-white"
 	}
-}
+};

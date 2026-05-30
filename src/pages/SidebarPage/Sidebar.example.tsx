@@ -1,7 +1,8 @@
-export const code = `
-import { Sidebar, SidebarItemProps } from 'banji-ui';
+import { Button, Sidebar } from "banji-ui";
 
-const components: SidebarItemProps[] = [
+import type { SidebarItem } from "banji-ui";
+
+const components: SidebarItem[] = [
 	{
 		id: "button",
 		children: "Button",
@@ -17,16 +18,14 @@ const components: SidebarItemProps[] = [
 		children: "Sidebar",
 		href: "/docs/sidebar"
 	}
-]
+];
 
-const Page = () => {
+const SidebarExample = () => {
 	return (
 		<Sidebar>
 			<Sidebar.Header>BANJI UI</Sidebar.Header>
 			<Sidebar.Content>
-				<Sidebar.Item href="" isActive={true}>
-					Introducción
-				</Sidebar.Item>
+				<Sidebar.Item isActive={true}>Introducción</Sidebar.Item>
 				<Sidebar.Group title="Componentes">
 					{components.map((component) => (
 						<Sidebar.Item key={component.id} href={component.href}>
@@ -41,23 +40,7 @@ const Page = () => {
 				</Button>
 			</Sidebar.Footer>
 		</Sidebar>
-	)
-}`
+	);
+};
 
-export const components = [
-	{
-		id: "button",
-		children: "Button",
-		href: "/docs/button"
-	},
-	{
-		id: "badge",
-		children: "Badge",
-		href: "/docs/badge"
-	},
-	{
-		id: "sidebar",
-		children: "Sidebar",
-		href: "/docs/sidebar"
-	}
-]
+export default SidebarExample;

@@ -1,14 +1,16 @@
-import Title from "./Title/Title"
-import type { TypographyProps as Props } from "./Typography.types"
+import H2 from "./H2/H2";
+import Title from "./Title/Title";
+import type { TypographyProps as Props } from "./Typography.types";
 
 const TypographyRoot = (props: Props) => {
-	const { children } = props
+	const { children } = props;
 
-	return <>{children}</>
-}
+	return <>{children}</>;
+};
 
 const Typography = Object.assign(TypographyRoot, {
-	Title
-})
+	Title,
+	H2
+});
 
-export default Typography
+export default Typography;
