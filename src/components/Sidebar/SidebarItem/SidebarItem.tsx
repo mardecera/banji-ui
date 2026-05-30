@@ -9,9 +9,16 @@ const SidebarItem = (props: Props) => {
 	const { asChild = false } = props;
 
 	if (asChild) {
-		return React.cloneElement(children as React.ReactElement, {
+		const child = React.Children.only(children);
+
+		if (!React.isValidElement(child)) {
+			return null;
+		}
+
+		return React.cloneElement(child, {
 			className: cn(
 				"hover:bg-gray-100 py-2 px-4 rounded-xl text-[14px] cursor-pointer",
+				child.props.className,
 				className,
 				checkActiveStyle({ active: isActive }),
 				isActive && activeClassName

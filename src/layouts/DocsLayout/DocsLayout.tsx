@@ -24,7 +24,6 @@ const DocsLayout = () => {
 									asChild
 								>
 									<Link to={component.href}>{component.children}</Link>
-									<Link to={component.href}>{component.children}</Link>
 								</Sidebar.Item>
 							))}
 						</Sidebar.Group>
