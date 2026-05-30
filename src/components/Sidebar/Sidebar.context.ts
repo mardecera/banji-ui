@@ -1,6 +1,6 @@
-import { createContext, useContext } from "react"
+import { createContext, useContext } from "react";
 
-type SidebarContextType = undefined
+type SidebarContextType = undefined;
 
-export const SidebarContext = createContext<SidebarContextType>(undefined)
-export const useSidebar = () => useContext(SidebarContext)
+export const SidebarContext = createContext<SidebarContextType>(undefined);
+export const useSidebar = () => useContext(SidebarContext);

@@ -2,7 +2,7 @@
 
 **Banji UI** es una librería de componentes para React construida con **Tailwind CSS v4**, enfocada en velocidad de desarrollo, consistencia visual y composición flexible.
 
-Incluye componentes reutilizables, tipados en TypeScript y listos para integrarse en cualquier proyecto moderno basado en Vite o React.
+Incluye componentes reutilizables, tipados en TypeScript y listos para integrarse en cualquier proyecto moderno basado en React.
 
 ---
 
@@ -25,7 +25,7 @@ npm install banji-ui
 Banji UI incluye estilos compilados. Debes importarlos explícitamente en tu app:
 
 ```ts
-import 'banji-ui/style.css'
+import "banji-ui/style.css"
 ```
 
 Sin esto, los componentes no tendrán estilos.
@@ -38,7 +38,9 @@ Sin esto, los componentes no tendrán estilos.
 import "banji-ui/style.css"
 import { Button } from "banji-ui"
 
-export default function App() {
-  return <Button label="click me"/>
+const App = () => {
+  return <Button>Click Me!</Button>
 }
+
+export default App
 ```

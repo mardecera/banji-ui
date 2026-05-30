@@ -1,3 +1,3 @@
 export type TypographyProps = {
-	children: React.ReactNode
-}
+	children: React.ReactNode;
+};

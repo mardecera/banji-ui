@@ -13,5 +13,10 @@ export const components = [
 		id: "sidebar",
 		children: "Sidebar",
 		href: "/docs/sidebar"
+	},
+	{
+		id: "modal",
+		children: "Modal",
+		href: "/docs/modal"
 	}
-]
+];

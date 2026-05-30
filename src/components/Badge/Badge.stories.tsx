@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from "@storybook/react"
-import Badge from "./Badge"
+import Badge from "./Badge";
+import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Badge> = {
 	title: "Components/Badge",
@@ -11,35 +11,35 @@ const meta: Meta<typeof Badge> = {
 			options: ["neutral", "success", "warning", "danger"]
 		}
 	}
-}
+};
 
-export default meta
-type Story = StoryObj<typeof Badge>
+export default meta;
+type Story = StoryObj<typeof Badge>;
 
 export const Neutral: Story = {
 	args: {
 		label: "Nuevo",
 		tone: "neutral"
 	}
-}
+};
 
 export const Success: Story = {
 	args: {
 		label: "Activo",
 		tone: "success"
 	}
-}
+};
 
 export const Warning: Story = {
 	args: {
 		label: "Pendiente",
 		tone: "warning"
 	}
-}
+};
 
 export const Danger: Story = {
 	args: {
 		label: "Error",
 		tone: "danger"
 	}
-}
+};

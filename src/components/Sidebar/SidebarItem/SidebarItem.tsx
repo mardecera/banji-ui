@@ -1,11 +1,12 @@
-import React from "react"
-import { cn } from "../../../utils/tailwind.utils"
-import { checkActiveStyle } from "./SidebarItem.helpers"
-import type { SidebarItem as Props } from "./SidebarItem.types"
+import React from "react";
+
+import { checkActiveStyle } from "./SidebarItem.helpers";
+import type { SidebarItem as Props } from "./SidebarItem.types";
+import { cn } from "../../../utils/tailwind.utils";
 
 const SidebarItem = (props: Props) => {
-	const { href, children, className, activeClassName, isActive } = props
-	const { asChild = false } = props
+	const { href, children, className, activeClassName, isActive } = props;
+	const { asChild = false } = props;
 
 	if (asChild) {
 		return React.cloneElement(children as React.ReactElement, {
@@ -15,7 +16,7 @@ const SidebarItem = (props: Props) => {
 				checkActiveStyle({ active: isActive }),
 				isActive && activeClassName
 			)
-		})
+		});
 	}
 
 	return (
@@ -30,7 +31,7 @@ const SidebarItem = (props: Props) => {
 		>
 			{children}
 		</a>
-	)
-}
+	);
+};
 
-export default SidebarItem
+export default SidebarItem;

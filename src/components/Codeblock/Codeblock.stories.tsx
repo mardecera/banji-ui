@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from "@storybook/react"
-import CodeBlock from "./Codeblock"
+import CodeBlock from "./Codeblock";
+import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof CodeBlock> = {
 	title: "Components/Codeblock",
@@ -12,20 +12,20 @@ const meta: Meta<typeof CodeBlock> = {
 		},
 		withNumbers: { control: "boolean" }
 	}
-}
+};
 
-export default meta
+export default meta;
 
-type Story = StoryObj<typeof CodeBlock>
+type Story = StoryObj<typeof CodeBlock>;
 
 const code = `
 import React from "react"
 
 const App = () => {
-	return (
-		<div>hello</div>
-	)
-}`
+	return <div>Hello World!</div>
+}
+
+export default App`;
 
 export const Default: Story = {
 	args: {
@@ -33,4 +33,4 @@ export const Default: Story = {
 		language: "tsx",
 		withNumbers: true
 	}
-}
+};

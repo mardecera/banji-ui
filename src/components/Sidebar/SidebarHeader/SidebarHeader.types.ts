@@ -1,3 +1,3 @@
 export type SidebarHeaderProps = {
-	children: React.ReactNode
-}
+	children: React.ReactNode;
+};
